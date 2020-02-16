@@ -1,26 +1,19 @@
-﻿//----------------------------------------------
-//            Realistic Car Controller
-//
-// Copyright © 2016 BoneCracker Games
-// http://www.bonecrackergames.com
-//
-//----------------------------------------------
-
+﻿
 using UnityEditor;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-[CustomEditor(typeof(RCC_AIBrakeZonesContainer))]
+[CustomEditor(typeof(Death_Race_AIBrakeZones_Container))]
 public class RCC_AIBZEditor : Editor {
-	
-	RCC_AIBrakeZonesContainer bzScript;
+
+	Death_Race_AIBrakeZones_Container bzScript;
 	
 	public override void  OnInspectorGUI () {
 		
 		serializedObject.Update();
 		
-		bzScript = (RCC_AIBrakeZonesContainer)target;
+		bzScript = (Death_Race_AIBrakeZones_Container)target;
 
 		if(GUILayout.Button("Delete Brake Zones")){
 			foreach(Transform t in bzScript.brakeZones){
@@ -40,7 +33,7 @@ public class RCC_AIBZEditor : Editor {
 	void OnSceneGUI (){
 
 		Event e = Event.current;
-		bzScript = (RCC_AIBrakeZonesContainer)target;
+		bzScript = (Death_Race_AIBrakeZones_Container)target;
 
 		if(e != null){
 

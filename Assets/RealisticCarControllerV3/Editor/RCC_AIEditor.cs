@@ -64,12 +64,12 @@ public class RCC_AIEditor : Editor {
 	[MenuItem("Tools/BoneCracker Games/Realistic Car Controller/AI Controller/Add BrakeZones Container To Scene", false)]
 	static void CreateBrakeZonesContainer(){
 		
-		if(GameObject.FindObjectOfType<RCC_AIBrakeZonesContainer>() == null){
+		if(GameObject.FindObjectOfType<Death_Race_AIBrakeZones_Container>() == null){
 			
 			GameObject bz = new GameObject("Brake Zones Container");
 			bz.transform.position = Vector3.zero;
 			bz.transform.rotation = Quaternion.identity;
-			bz.AddComponent<RCC_AIBrakeZonesContainer>();
+			bz.AddComponent<Death_Race_AIBrakeZones_Container>();
 			Selection.activeGameObject = bz;
 			
 		}else{
