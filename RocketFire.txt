@@ -1,0 +1,35 @@
+ public Rigidbody projectile;
+    public ParticleSystem fire1;
+    // Start is called before the first frame update
+    void Awake()
+    {
+        fire1.Stop();
+
+
+    }
+    void Start()
+    {
+        fire1.Stop();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(Input.GetButtonDown("Fire1"))
+        {
+           
+        }
+        
+    }
+
+    public void OnFire()
+    {
+        fire1.Play();
+        Rigidbody clone;
+        clone = Instantiate(projectile, transform.position, transform.rotation);
+        clone.velocity = transform.TransformDirection(Vector3.forward * 50);
+    }
+    public void OffFire()
+    {
+        fire1.Stop();
+    }
